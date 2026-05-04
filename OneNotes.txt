@@ -88,7 +88,7 @@ print(name[0:]) //from the given to till the end (no index after :)
 find the length of the function? len() function
 
 name = input()
-print(len(name())
+print(len(name))
 
 string concatenation: + operator
 
@@ -114,13 +114,13 @@ print(string.lower())
 Reverse the String: slice operator (::-1)
 
 string = input()
-print(string[::-1]
+print(string[::-1])
 
 
 string1 = input()
 string2 = input()
 string3 = string1.strip()+string2.strip() --oneline (without/remove space/newline) (string concatenation in oneline)
-print(string3[::-1] --reverse
+print(string3[::-1]) --reverse
 
 Replace the string: replace() function
 string =input()
@@ -154,8 +154,10 @@ Print all in List:
 
 examplelist = ["abc", 100, 'ABC']
 for item in examplelist:
-print(item)
-print(item[0])
+    print(item)
+    # Note: item[0] will error if item is an int
+    if isinstance(item, str):
+        print(item[0])
 
 
 List Slice Operator:
@@ -212,7 +214,7 @@ print(n, end=" ")
 
 Append and Sort ():
 
-numbers = [1, 3, 6,]
+numbers = [1, 3, 6]
 numbers.append(2)
 numbers.append(4)
 numbers.append(5)
