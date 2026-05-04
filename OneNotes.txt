@@ -1,0 +1,229 @@
+----------------------------------------------------------------------------------------------------------------------
+OneNotes:
+----------------------------------------------------------------------------------------------------------------------
+Competitive Programming, Problem Solving, Logical Thinking and Reasoning Ability 
+----------------------------------------------------------------------------------------------------------------------
+Day 0: 04/05/2026
+----------------------------------------------------------------------------------------------------------------------
+Basics
+Datatypes
+Operators (Priority and Precedence Table)
+----------------------------------------------------------------------------------------------------------------------
+
+print("string")
+
+x=2
+y=50
+//define a integer
+
+print(x*y)
+//100
+
+name = 'sathish'
+city = "Chennai"
+//define a string ( ' and " ).
+
+print function:
+default --> append a new line in the end
+print("one")
+
+print("one", end = "")
+print("one", end = "-")
+
+y=9
+y="5*9"
+
+
+input() function --> Reading the standard input (default: string)
+
+x = input()
+y = input()
+print(x+y)
+10
+20
+1020 not 30
+
+Convert the string to int
+int() function --> type casting
+
+x = int(input())
+y = int(input())
+print(x+y)
+10
+20
+30 not 1020
+
+Convert the string to float
+float() function --> type casting
+
+x = float(input()) //20 //10
+y = float(input()) //10 //20
+print(x-y)
+//10 //-10
+
+Rounding float value (round() function)
+
+print (round(price,2)) //2 decimal values
+
+print (round((x+y),3))
+
+
+variable name --> case sensitive (strict)
+identifiers/variable name (naming conventions):  no symbols allowed
+
+----------------------------------------------------------------------------------------------------------------------
+String
+----------------------------------------------------------------------------------------------------------------------
+
+name = input()
+print(name[0]) -get first char
+
+Slice operator: (to get in between char)
+
+name = input()
+print(name[2:6]) //2to5 
+print(name[0:5]) //0to4
+print(name[0:]) //from the given to till the end (no index after :)
+
+find the length of the function? len() function
+
+name = input()
+print(len(name())
+
+string concatenation: + operator
+
+firstname = input() //abc
+secondname = input() //def
+print(firstname+secondname) Because of the space newline/nextline
+//abc
+//def
+
+firstname = input() //abc
+secondname = input() //def
+print(firstname.strip()+secondname.strip()) 
+//abcdef
+
+strip() function -- to remove space newline/nextline
+
+convert to upper and lower case methods/functions
+
+string = input()
+print(string.upper())
+print(string.lower())
+
+Reverse the String: slice operator (::-1)
+
+string = input()
+print(string[::-1]
+
+
+string1 = input()
+string2 = input()
+string3 = string1.strip()+string2.strip() --oneline (without/remove space/newline) (string concatenation in oneline)
+print(string3[::-1] --reverse
+
+Replace the string: replace() function
+string =input()
+print(string.replace("g","i"))
+
+Swapcase method (case to the opposite --> upper to lower, lower to upper)
+
+string =input()
+print(string.swapcase())
+
+inputstring =input()
+inputstring[0:2] //first two
+inputstring[2:] //from three to till end
+print(inputstring[0:3].strip()+inputstring[2:].swapcase())
+
+inputstring =input()
+inputstringfirsttwo=inputstring[0:2] //first two
+inputstringfromthree=inputstring[2:] //from three to till end
+print(inputstringfirsttwo.strip()+inputstringfromthree.swapcase())
+
+join() methods/functions:
+
+inputstring =input()
+sep="-"
+print(sep.join(inputstring))
+
+----------------------------------------------------------------------------------------------------------------------
+List, Tupules & Set
+----------------------------------------------------------------------------------------------------------------------
+Print all in List:
+
+examplelist = ["abc", 100, 'ABC']
+for item in examplelist:
+print(item)
+print(item[0])
+
+
+List Slice Operator:
+
+Reading input in a list:
+
+values = list(input().split())
+print(item[1]) //print second
+
+list1 =["one", "second", "three"]
+list2 =["four"]
+combine=list1+list2
+for item in combine: 
+  print(item, end=" ")
+
+List concatenation:
+
+//one two three four
+  
+list1 = list(input().split())
+list2 = list(input().split())
+list3 = list1+list2 // list concatenation
+for item in list3:
+  print(item, end=" ")
+
+Tupules (read only) vs Lists (Modifiable):
+
+List []
+Tupules ()
+
+items = (100, "stars", "Pen");
+print(items[0], end=" ",items[1])
+//100 stars
+
+Appending Elements to List:
+
+append() function:  add element to the list
+
+numbers = [10, 20]
+numbers.append(30)
+numbers.append(40)
+for n in numbers:
+print(n, end=" ")
+
+//10 20 30 40
+
+List Sorting Element: 
+sort() method //ascending order (default)
+
+numbers = [1, 3, 6, 2, 4, 5]
+numbers.sort()
+for n in numbers:
+print(n, end=" ")
+
+Append and Sort ():
+
+numbers = [1, 3, 6,]
+numbers.append(2)
+numbers.append(4)
+numbers.append(5)
+numbers.sort()
+for n in numbers:
+print(n, end=" ")
+
+List Sorting Element (Descending Order):
+
+numbers = [1, 3, 6, 2, 4, 5]
+numbers.sort(reverse=True)
+for n in numbers:
+print(n, end=" ")
+
