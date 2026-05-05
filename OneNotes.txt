@@ -229,3 +229,263 @@ numbers.sort(reverse=True)
 for n in numbers:
 print(n, end=" ")
 
+----------------------------------------------------------------------------------------------------------------------
+Day 1: 05/05/2026
+----------------------------------------------------------------------------------------------------------------------
++ - * / % 
+** (power of, exponent)
+// (floor division) (9.0//2.0 --> 4.0) #middle
+----------------------------------------------------------------------------------------------------------------------
+
+a+c/b-d/e
+
+150+200/5-20/4
+//185.0
+
+n = int(input())
+print(n%5)
+//2  (Remainder) --> Input n divided by 9.
+
+find the middle letter of the odd length input string:
+
+str = input()
+strlength = len(str)
+print(str[strlength//2])
+
+//MINSET --> D
+//7//2 --> 3
+
+find the first and middle letter of the odd length input string:
+
+str = input()
+strlength = len(str)
+print(str[0]+str[strlength//2])
+
+
+if - else
+any non zero or non null value --True
+any zero or null value  --False
+
+Even no:
+
+n = int(input())
+if(n%2==0):
+ print("even: "+n)
+if(n%2==1):
+ print("odd: "+n)
+ 
+if(n%2==0):
+ print("even: "+n)
+else:
+ print("odd: "+n)
+ 
+ 
+Statement after : must be uniformly indented (space/tab) else error
+
+if():
+else:
+
+Comparsion Operator:
+== equal to 
+!= not equat to
+
+N multiple of 5 
+if(N%5==0):
+else:
+
+< <= 
+> >=
+
+and -all
+or -anyone
+not -reverse
+(logical operators)
+
+if(N%2==0 and N<=5000)
+
+n = int(input())
+if(n<=100 and n>=20):
+	print("Yes")
+else:
+	print("No")
+
+--	
+	
+n = int(input())
+if not (n>100 and n<20):
+	print("Yes")
+else:
+	print("No")
+
+(USING not)
+
+
+---
+
+values = [1, 2, 3] -can modify
+values = (1, 2, 3) -read only
+
+List = list(input().split()) --reading a input for a list
+for n in List:
+	print(n, end=" ")
+	
+12345
+1 2 3 4 5 
+
+List = list(input().split()) --reading a input for a list
+for n in List:
+	print(n, end="")
+
+12345
+12345
+
+List = list(input().split()) --reading a input for a list
+for n in List:
+	print(n)
+
+12345
+1
+2
+3
+4
+5
+
+Set --> Unique Elements
+(Curly braces are used to denote Set.)
+
+
+Set = {1, 2, 1, 3} (unique only)
+for n in Set:
+	print(n, end=" ")
+
+// 1 2 3
+
+[]- modify
+()- read only
+{}- unique only 
+
+Converting Set to list, list to Set:
+
+set = {1, 3, 1, 2, 1, 4}
+list = list(set)
+sortedlist = list.sort()
+for n in sortedlist:
+	print(n, end" ")
+	
+//1 2 3 4 
+
+duplicatedlist = [1, 3, 1, 2, 1, 4]
+uniqueset = set(duplicatedlist)
+uniquelist = list(uniqueset) //uniquelist = list(set(duplicatedlist))
+sorteduniquelist = uniquelist.sort()
+
+for n in sorteduniquelist:
+	print(n, end" ")
+	
+//1 2 3 4 
+
+---
+
+in operator (membership): (is there or not only in sequence)
+not in operator (membership): (is there or not only in sequence)
+
+-to check if an element is in or not in a list, tupule, set.
+-to check the presence/adsence of a sequence of characters in a string.
+
+numbers = list(map(int,input().split())) -reading input?
+
+str = "abcd"
+if "ab" in str:
+	print("Y")
+
+numbers = list(map(int,input().split()))
+if 100 in numbers:
+	print("Yes")
+else:
+	print("No")
+
+numbers = list(map(int,input().split()))
+if 100 not in numbers:
+	print("No")
+else:
+	print("Yes")
+
+-------
+
+elif:
+
+n = int(input())
+if(n<=9):
+	print("Single Digit")
+elif(n<=99):
+	print("Double Digit")
+elif(n<=999):
+	print("Triple Digit")
+
+---
+
+age = int(input()) 
+if(age>=1 and age<=12): 
+	print("Child")
+elif (age>=13 and age<=19): 
+	print("Teen")
+elif (age>=20): 
+	print("Adult")
+	
+---
+
+nested if else elif
+
+- If the input number is odd and less than or equal to 100, then the next odd number is printed.
+- If the input number is odd and more than 100, then the previous odd number is printed.
+- Else the input number is printed as such.
+
+num = int(input()) 
+if num%2== 1:
+	if num <= 100:
+		print (num+2)
+	else:
+		print(num-2)
+else:
+	print (num)
+	
+- If the input number is odd and less than or equal to 1000, then the output must be double the number.
+- If the input number is odd and more than 1000 but less than or equal to 10000, then the output must be 200 less than the given number.
+- If the input number is odd and more than 10000, then the output must be 5000 less than the given number.
+- Else the input number is printed as such.
+
+num = int(input()) 
+if(num%2==1) 
+	if num <=1000:
+		print(num*2)
+	elif num >1000 and num<=10000:
+		print(num-200)
+	elif num > 10000: 
+		print(num-5000)
+else:
+	print(num)
+
+-------------------------------------------------------------------------------------------------------
+Numbers and Strings
+-------------------------------------------------------------------------------------------------------
+
+string to int:
+map() method/function:
+
+To convert a list of string values to int, we can use map method, 
+which applies the int() conversion 
+to each of the values in the list passed as an argument.
+
+As an example, the inputval.split(" ") yields a list of string values which is assigned to stringnumbers. 
+Each of these string values are converted to int with the map method and hence finally the numbers is a list of int values.
+
+inputval = input()
+stringnumbers = inputval.split(" ") 
+numbers = list(map(int, stringnumbers))
+sum=0
+for num in numbers:
+	sum+=num
+	print (sum)
+	
+----
+
